@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush | Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Ayush, BCA student and aspiring software developer from Surat, Gujarat. Python, C, C++, C# and web development." />
+  <meta name="theme-color" content="#0a0c11" />
+
+  <!-- Social share preview. TODO: તારી live site નું URL અને image મૂક -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ayush | Software Developer" />
+  <meta property="og:description" content="BCA student from Surat building clean, fast and useful things for the web." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236c8cff'/%3E%3Ctext x='50' y='70' font-size='62' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Person", "name": "Ayush", "jobTitle": "Aspiring Software Developer", "address": { "@type": "PostalAddress", "addressLocality": "Surat", "addressRegion": "Gujarat", "addressCountry": "IN" } }
+  </script>
+
+  <!-- Theme ને page load પહેલાં સેટ કરે છે (flash ન થાય) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.preloader{display:none}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <div class="pl-count"><span id="plCount">0</span>%</div>
+      <div class="pl-name">Ayush<span>.</span></div>
+    </div>
+    <div class="pl-bar"><span></span></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo magnetic">Ayush<span>.</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#journey" data-nav="journey">Journey</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn magnetic" id="themeToggle" aria-label="Toggle light or dark theme">◐</button>
+      <a class="btn small primary magnetic nav-cta" href="#contact">Hire me</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="grid-bg"></div>
+      <div class="spot"></div>
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+
+      <div class="hero-inner">
+        <p class="eyebrow fade"><span class="pulse"></span> Open to internships &amp; opportunities</p>
+        <h1 class="big">
+          <span class="line"><span class="name" data-split>Ayush</span></span>
+          <span class="role-line"><span id="role" class="grad"></span><span class="caret"></span></span>
+        </h1>
+        <p class="sub fade">BCA student from Surat, Gujarat. I build clean, fast and useful things with code.</p>
+        <div class="cta fade">
+          <a class="btn primary magnetic" href="#projects">View my work</a>
+          <a class="btn magnetic" href="#contact">Contact me</a>
+          <!-- TODO: resume.pdf file આ જ folder માં મૂક -->
+          <a class="btn ghost magnetic" href="resume.pdf" download>Resume ↓</a>
+        </div>
+      </div>
+      <div class="scroll-hint fade">Scroll<span></span></div>
+    </section>
+
+    <!-- SKILLS MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner">
+        <div class="mq-set">
+          <span>Python</span><i>✦</i><span>C</span><i>✦</i><span>C++</span><i>✦</i><span>C#</span><i>✦</i><span>HTML</span><i>✦</i><span>CSS</span><i>✦</i><span>JavaScript</span><i>✦</i><span>Git</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <p class="label">01 — About me</p>
+      <p class="about-text">
+        I'm a BCA student who loves turning ideas into working software. I code in Python, C, C++ and C#, and I build websites too. My goal is to become a software developer at a big company, so I learn something new and build something real every single day.
+      </p>
+      <!-- TODO: સાચા numbers મૂક -->
+      <div class="stats">
+        <div class="stat"><div class="stat-num"><span data-count="5">0</span>+</div><p>Languages &amp; stacks</p></div>
+        <div class="stat"><div class="stat-num"><span data-count="4">0</span></div><p>Featured projects</p></div>
+        <div class="stat"><div class="stat-num"><span data-count="1">0</span></div><p>Big goal: Software Developer</p></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <p class="label">02 — What I work with</p>
+      <h2 class="title">Skills</h2>
+      <div class="skill-grid">
+        <div class="skill"><span class="ico">01</span><h3>Python</h3><p>Scripts, automation, problem solving</p></div>
+        <div class="skill"><span class="ico">02</span><h3>Web Development</h3><p>HTML, CSS, JavaScript, responsive design</p></div>
+        <div class="skill"><span class="ico">03</span><h3>C</h3><p>Programming fundamentals and logic</p></div>
+        <div class="skill"><span class="ico">04</span><h3>C++</h3><p>OOP and data structures</p></div>
+        <div class="skill"><span class="ico">05</span><h3>C#</h3><p>Object-oriented applications</p></div>
+        <div class="skill"><span class="ico">06</span><h3>Git &amp; GitHub</h3><p>Version control and collaboration</p></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (horizontal scroll on desktop) -->
+    <section class="projects" id="projects">
+      <div class="projects-head">
+        <div>
+          <p class="label">03 — Selected work</p>
+          <h2 class="title">Projects</h2>
+        </div>
+        <div class="proj-meta">
+          <div class="proj-counter"><span id="projCur">01</span> / <span id="projTotal">04</span></div>
+          <div class="proj-bar"><div class="proj-fill"></div></div>
+        </div>
+      </div>
+      <div class="h-track">
+        <!-- TODO: દરેક card માં real project ની માહિતી, screenshot અને links મૂક.
+             Screenshot માટે .thumb ની અંદર: <img src="images/project1.png" alt="Project screenshot"> -->
+        <article class="card" data-tilt>
+          <div class="thumb t1"><span>01</span></div>
+          <div class="card-body">
+            <h3>Project Name One</h3>
+            <p>What it does, why you built it and what you learned. Keep it to two lines.</p>
+            <div class="tags"><span>Python</span><span>CLI</span></div>
+            <div class="links"><a href="https://github.com/YOUR_USERNAME/project-one" target="_blank" rel="noopener">GitHub ↗</a><a href="#" target="_blank" rel="noopener">Live demo ↗</a></div>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="thumb t2"><span>02</span></div>
+          <div class="card-body">
+            <h3>Project Name Two</h3>
+            <p>Describe the problem this project solves and the tech you used.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="links"><a href="https://github.com/YOUR_USERNAME/project-two" target="_blank" rel="noopener">GitHub ↗</a><a href="#" target="_blank" rel="noopener">Live demo ↗</a></div>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="thumb t3"><span>03</span></div>
+          <div class="card-body">
+            <h3>Project Name Three</h3>
+            <p>A short summary of your third project and your role in it.</p>
+            <div class="tags"><span>C#</span><span>Desktop</span></div>
+            <div class="links"><a href="https://github.com/YOUR_USERNAME/project-three" target="_blank" rel="noopener">GitHub ↗</a><a href="#" target="_blank" rel="noopener">Live demo ↗</a></div>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="thumb t4"><span>04</span></div>
+          <div class="card-body">
+            <h3>Project Name Four</h3>
+            <p>Add a screenshot in the repo README so people understand it fast.</p>
+            <div class="tags"><span>C++</span><span>DSA</span></div>
+            <div class="links"><a href="https://github.com/YOUR_USERNAME/project-four" target="_blank" rel="noopener">GitHub ↗</a><a href="#" target="_blank" rel="noopener">Live demo ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey" id="journey">
+      <p class="label">04 — My path</p>
+      <h2 class="title">Journey</h2>
+      <div class="timeline">
+        <div class="line-bg"><div class="line-fill"></div></div>
+        <div class="step"><h3>Started coding</h3><p>Learned C, C++ and Python basics, and fell in love with problem solving.</p></div>
+        <div class="step"><h3>BCA, Surat</h3><p>Studying computer applications and building projects alongside college.</p></div>
+        <div class="step"><h3>Building in public</h3><p>Sharing projects on GitHub and LinkedIn, and applying for internships.</p></div>
+        <div class="step"><h3>Next: Software Developer</h3><p>Working towards a software developer role at a big company.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="label">05 — Let's talk</p>
+      <h2 class="huge">Let's build something <span class="grad">together.</span></h2>
+      <p class="contact-sub">Open to internships, freelance work and collaborations. Drop me a message!</p>
+      <div class="contact-links">
+        <!-- TODO: પોતાના email અને links બદલ -->
+        <a class="btn primary magnetic" href="mailto:youremail@example.com">Email me</a>
+        <button class="btn magnetic" id="copyEmail" data-email="youremail@example.com">Copy email</button>
+        <a class="btn magnetic" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn magnetic" href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Ayush. Designed &amp; built from scratch.</span>
+    <span>HTML · CSS · JavaScript · GSAP</span>
+  </footer>
+
+  <button class="to-top magnetic" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
