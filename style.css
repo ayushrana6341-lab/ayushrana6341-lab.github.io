@@ -24,7 +24,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
@@ -304,4 +304,18 @@ section { position: relative; padding: 120px 6vw; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Mobile fixes ---------- */
+/* Phone browser ma address bar na karane 100vh vadhare padtu hatu; svh sachi visible height aape chhe */
+@supports (height: 100svh) {
+  .hero, .about, .projects { min-height: 100svh; }
+  .contact { min-height: 90svh; }
+}
+img, svg, video { max-width: 100%; }
+@media (max-width: 480px) {
+  .btn { padding: 12px 22px; }
+  .contact-links .btn, .cta .btn { flex: 1 1 auto; text-align: center; }
+  .to-top { right: 16px; bottom: 16px; }
+  .step::before { left: -48px; }
 }
